@@ -1,18 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Закрывающий тег</title>
+        <link rel="icon" href="favicon.ico" />
+        <link rel="apple-touch-icon" href="images/favicons/favicon.png" />
+        <link rel="icon" href="svg/favicon.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="./fonts/fonts.css" />
+        <link rel="stylesheet" href="./styles/variables.css" />
+        <link rel="stylesheet" href="./styles/globals.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/animations.css" />
+    </head>
+    <body class="page">
+        <div class="header-wrapper wrapper">
+            <header class="header">
+                <h1 class="header_title">&lt;/HTML&gt;</h1>
+                <h2 class="header_subtitle">закрывающий тег</h2>
+            </header>
+        </div>
+        <div class="main-wrapper wrapper">
+            <main>
+                <ul class="main-list">
+                    <li class="main-list-element">
+                        <h3 class="main-list-item_title">Фритрек и нулевой спринт: Подготовка к работе</h3>
+                        <img src="/images/car.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        <div class="main-list-item_info-block">
+                            <p class="main-list-item_info-block_text">
+                                Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые
+                                знания могут повлиять на ваше будущее.
+                            </p>
+                            <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале обучения.</p>
+                        </div>
+                        <div class="main-list-item_buttons">
+                            <button class="card__like-button">
+                                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                    <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                    <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                    <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                    <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                    <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                    <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                    <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                    <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                    <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                    <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                    <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                    <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                    <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                    <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                    <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                    <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                    <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                    <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                    <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                    <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                </svg>
+                            </button>
+                            <button class="like-button">
+                                <span class="button__text">like</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <button class="card__icon-button">
+                    <span class="button__text" view-box="0 0 39 39"></span>
+                    <svg class="card__icon">
+                        <use href="/svg/icons.svg#floppy" />
+                    </svg>
+                </button>
+            </main>
+        </div>
+        <script src="./scripts/like.js"></script>
+    </body>
 </html>

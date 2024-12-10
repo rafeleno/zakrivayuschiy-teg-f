@@ -51,3 +51,9 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+.wrapper {
+    margin: auto;
+    margin-top: var(--wrapper-mt);
+    width: var(--wrapper-width-clamp-function);
+}

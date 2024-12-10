@@ -1,1 +1,17 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-font-family: inter variable;
+    --accent-font-family: PressStart2P;
+    --main-font-weight: 400;
+    --title-font-weight: 700;
+
+    --wrapper-mt: 100px;
+    --wrapper-width-clamp-function: clamp(375px, 90%, 694px);
+
+    --bg-header: #fff;
+    --main-border:  2px solid #000;
+    --header-clamp-func: clamp(120px, 100%, 128px);
+    --header-title-fs: 65px;
+    --header-subtitle-fs: 23px;
+
+    --main-list-gap: 52px;
+}

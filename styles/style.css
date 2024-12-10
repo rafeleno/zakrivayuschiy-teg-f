@@ -11,6 +11,47 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
+    font-family: var(--main-font-family);
+    font-weight: var(--main-font-weight);
+    background: repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+                repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+                linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+    background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: var(--header-clamp-func);
+    padding-bottom: var(--header-clamp-func);
+    background-color: var(--bg-header);
+    border: var(--main-border);
+    font-family: var(--accent-font-family);
+}
+
+.header_title {
+    font-size: var(--header-title-fs);
+    margin-bottom: 20px;
+}
+
+.header_subtitle {
+    font-size: var(--header-subtitle-fs);
+}
+
+.main-list {
+    display: flex;
+    gap: var(--main-list-gap);
+}
+
+.main-list-element {
+    background: #fff;
+}
+
+.main-list-item_title {
+    font-weight: var(--title-font-weight);
+    border: var(--main-border);
 }
