@@ -55,5 +55,10 @@ ol {
 .wrapper {
     margin: auto;
     margin-top: var(--wrapper-mt);
-    width: var(--wrapper-width-clamp-function);
+    width: var(--wrapper-width);
+}
+
+.button {
+    line-height: 90%;
+    background-color: var(--main-color);
 }

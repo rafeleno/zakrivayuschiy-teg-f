@@ -7,6 +7,8 @@
         <link rel="icon" href="favicon.ico" />
         <link rel="apple-touch-icon" href="images/favicons/favicon.png" />
         <link rel="icon" href="svg/favicon.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./filters.css">
         <link rel="stylesheet" href="./fonts/fonts.css" />
         <link rel="stylesheet" href="./styles/variables.css" />
         <link rel="stylesheet" href="./styles/globals.css" />
@@ -24,53 +26,387 @@
             <main>
                 <ul class="main-list">
                     <li class="main-list-element">
-                        <h3 class="main-list-item_title">Фритрек и нулевой спринт: Подготовка к работе</h3>
-                        <img src="/images/car.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
-                        <div class="main-list-item_info-block">
-                            <p class="main-list-item_info-block_text">
-                                Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые
-                                знания могут повлиять на ваше будущее.
-                            </p>
-                            <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале обучения.</p>
+                        <div class="main-list-item_title-wrapper">
+                            <h3 class="main-list-item_title">Фритрек и нулевой спринт: Подготовка к работе</h3>
                         </div>
-                        <div class="main-list-item_buttons">
-                            <button class="card__like-button">
-                                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
-                                    <path d="M6 0H3V3H6V0Z" fill="black"/>
-                                    <path d="M9 0H6V3H9V0Z" fill="black"/>
-                                    <path d="M3 3H0V6H3V3Z" fill="black"/>
-                                    <path d="M3 6H0V9H3V6Z" fill="black"/>
-                                    <path d="M3 9H0V12H3V9Z" fill="black"/>
-                                    <path d="M12 0H9V3H12V0Z" fill="black"/>
-                                    <path d="M6 12H3V15H6V12Z" fill="black"/>
-                                    <path d="M9 15H6V18H9V15Z" fill="black"/>
-                                    <path d="M12 18H9V21H12V18Z" fill="black"/>
-                                    <path d="M21 0H24V3H21V0Z" fill="black"/>
-                                    <path d="M18 0H21V3H18V0Z" fill="black"/>
-                                    <path d="M24 3H27V6H24V3Z" fill="black"/>
-                                    <path d="M24 6H27V9H24V6Z" fill="black"/>
-                                    <path d="M24 9H27V12H24V9Z" fill="black"/>
-                                    <path d="M15 0H18V3H15V0Z" fill="black"/>
-                                    <path d="M21 12H24V15H21V12Z" fill="black"/>
-                                    <path d="M18 15H21V18H18V15Z" fill="black"/>
-                                    <path d="M15 18H18V21H15V18Z" fill="black"/>
-                                    <path d="M15 3H12V6H15V3Z" fill="black"/>
-                                    <path d="M15 21H12V24H15V21Z" fill="black"/>
-                                </svg>
-                            </button>
-                            <button class="like-button">
-                                <span class="button__text">like</span>
-                            </button>
+                        <div class="main-list-item_image-wrapper">
+                            <span class="main-list-item_image-label">&lt;/HTML&gt;</span>
+                            <img src="/images/car.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        </div>
+                        <div class="main-list-element_wrapper">
+                            <div class="main-list-item_info-block">
+                                <p class="main-list-item_info-block_text">
+                                    Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые
+                                    знания могут повлиять на ваше будущее.
+                                </p>
+                                <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале обучения.</p>
+                            </div>
+                            <div class="main-list-item_buttons">
+                                <button class="card__like-button button">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                        <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                        <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                        <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                        <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                        <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                        <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                        <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                        <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                        <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                        <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                        <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                        <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                        <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                        <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                        <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                        <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                        <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                        <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                        <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                        <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="like-button button">
+                                    <span class="button__text">Like</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-list-element">
+                        <div class="main-list-item_title-wrapper">
+                            <h3 class="main-list-item_title">1 спринт: Я — чистый лист</h3>
+                        </div>
+                        <div class="main-list-item_image-wrapper">
+                            <span class="main-list-item_image-label">&lt;/HTML&gt;</span>
+                            <img src="/images/grass.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        </div>
+                        <div class="main-list-element_wrapper">
+                            <div class="main-list-item_info-block">
+                                <p class="main-list-item_info-block_text">
+                                    На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются более глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?
+                                </p>
+                                <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале первого спринта.</p>
+                            </div>
+                            <div class="main-list-item_buttons">
+                                <button class="card__like-button button">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                        <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                        <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                        <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                        <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                        <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                        <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                        <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                        <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                        <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                        <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                        <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                        <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                        <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                        <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                        <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                        <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                        <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                        <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                        <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                        <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="like-button button">
+                                    <span class="button__text">Like</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-list-element">
+                        <div class="main-list-item_title-wrapper">
+                            <h3 class="main-list-item_title">1 спринт: А если не получится?</h3>
+                        </div>
+                        <div class="main-list-item_image-wrapper">
+                            <span class="main-list-item_image-label">&lt;CSS&gt;</span>
+                            <img src="/images/scare.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        </div>
+                        <div class="main-list-element_wrapper">
+                            <div class="main-list-item_info-block">
+                                <p class="main-list-item_info-block_text">
+                                    Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть и смениться ожиданием провала. Или вы, наоборот, могли вдохновиться успехами и поверить в себя.
+                                </p>
+                                <p class="main-list-item_info-block_text">Место для ваших воспоминаний об окончании первого спринта.</p>
+                            </div>
+                            <div class="main-list-item_buttons">
+                                <button class="card__like-button button">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                        <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                        <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                        <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                        <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                        <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                        <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                        <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                        <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                        <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                        <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                        <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                        <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                        <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                        <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                        <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                        <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                        <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                        <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                        <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                        <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="like-button button">
+                                    <span class="button__text">Like</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-list-element">
+                        <div class="main-list-item_title-wrapper">
+                            <h3 class="main-list-item_title">2 спринт: Погоня за идеалом</h3>
+                        </div>
+                        <div class="main-list-item_image-wrapper">
+                            <span class="main-list-item_image-label">&lt;desigions&gt;</span>
+                            <img src="/images/evolution.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        </div>
+                        <div class="main-list-element_wrapper">
+                            <div class="main-list-item_info-block">
+                                <p class="main-list-item_info-block_text">
+                                    На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё впереди. Вы могли попытаться погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не подвержены перфекционизму и вместо того, чтобы сделать идеально, старались просто сделать.
+                                </p>
+                                <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале обучения.</p>
+                            </div>
+                            <div class="main-list-item_buttons">
+                                <button class="card__like-button button">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                        <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                        <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                        <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                        <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                        <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                        <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                        <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                        <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                        <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                        <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                        <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                        <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                        <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                        <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                        <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                        <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                        <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                        <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                        <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                        <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="like-button button">
+                                    <span class="button__text">Like</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-list-element">
+                        <div class="main-list-item_title-wrapper">
+                            <h3 class="main-list-item_title">2 спринт: О тех, кто рядом</h3>
+                        </div>
+                        <div class="main-list-item_image-wrapper">
+                            <span class="main-list-item_image-label">care</span>
+                            <img src="/images/family.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        </div>
+                        <div class="main-list-element_wrapper">
+                            <div class="main-list-item_info-block">
+                                <p class="main-list-item_info-block_text">
+                                    Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против целого мира). Вас окружали одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если очередной макет просто так не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники, не правда ли?
+                                </p>
+                                <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале обучения.</p>
+                            </div>
+                            <div class="main-list-item_buttons">
+                                <button class="card__like-button button">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                        <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                        <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                        <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                        <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                        <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                        <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                        <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                        <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                        <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                        <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                        <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                        <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                        <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                        <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                        <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                        <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                        <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                        <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                        <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                        <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="like-button button">
+                                    <span class="button__text">Like</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-list-element">
+                        <div class="main-list-item_title-wrapper">
+                            <h3 class="main-list-item_title">3 спринт: Обходные стратегии</h3>
+                        </div>
+                        <div class="main-list-item_image-wrapper">
+                            <span class="main-list-item_image-label">&lt;support&gt;</span>
+                            <img src="/images/diferent_ways.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        </div>
+                        <div class="main-list-element_wrapper">
+                            <div class="main-list-item_info-block">
+                                <p class="main-list-item_info-block_text">
+                                    На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.
+                                </p>
+                                <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале обучения.</p>
+                            </div>
+                            <div class="main-list-item_buttons">
+                                <button class="card__like-button button">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                        <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                        <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                        <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                        <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                        <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                        <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                        <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                        <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                        <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                        <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                        <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                        <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                        <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                        <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                        <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                        <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                        <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                        <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                        <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                        <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="like-button button">
+                                    <span class="button__text">Like</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-list-element">
+                        <div class="main-list-item_title-wrapper">
+                            <h3 class="main-list-item_title">3 спринт: Когда опускаются руки</h3>
+                        </div>
+                        <div class="main-list-item_image-wrapper">
+                            <span class="main-list-item_image-label">&lt;lifes-style: none;&gt;</span>
+                            <img src="/images/hands_down.png" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        </div>
+                        <div class="main-list-element_wrapper">
+                            <div class="main-list-item_info-block">
+                                <p class="main-list-item_info-block_text">
+                                    Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и проектную пора сдавать, и задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень нужна концентрация. Вспомните, откуда вы её черпали.
+                                </p>
+                                <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале обучения.</p>
+                            </div>
+                            <div class="main-list-item_buttons">
+                                <button class="card__like-button button">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                        <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                        <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                        <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                        <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                        <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                        <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                        <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                        <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                        <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                        <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                        <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                        <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                        <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                        <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                        <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                        <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                        <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                        <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                        <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                        <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="like-button button">
+                                    <span class="button__text">Like</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-list-element">
+                        <div class="main-list-item_title-wrapper">
+                            <h3 class="main-list-item_title">«Сейчас я здесь»</h3>
+                        </div>
+                        <div class="main-list-item_image-wrapper">
+                            <span class="main-list-item_image-label">&lt;experience&gt;</span>
+                            <img src="/images/Free.jpg" alt="Грузовичок с мороженным на фоне вечернего пейзажа" class="main-list-item_image" />
+                        </div>
+                        <div class="main-list-element_wrapper">
+                            <div class="main-list-item_info-block">
+                                <p class="main-list-item_info-block_text">
+                                    Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто путь — и есть результат.
+                                </p>
+                                <p class="main-list-item_info-block_text">Место для ваших воспоминаний о начале обучения.</p>
+                            </div>
+                            <div class="main-list-item_buttons">
+                                <button class="card__like-button button">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+                                        <path d="M6 0H3V3H6V0Z" fill="black"/>
+                                        <path d="M9 0H6V3H9V0Z" fill="black"/>
+                                        <path d="M3 3H0V6H3V3Z" fill="black"/>
+                                        <path d="M3 6H0V9H3V6Z" fill="black"/>
+                                        <path d="M3 9H0V12H3V9Z" fill="black"/>
+                                        <path d="M12 0H9V3H12V0Z" fill="black"/>
+                                        <path d="M6 12H3V15H6V12Z" fill="black"/>
+                                        <path d="M9 15H6V18H9V15Z" fill="black"/>
+                                        <path d="M12 18H9V21H12V18Z" fill="black"/>
+                                        <path d="M21 0H24V3H21V0Z" fill="black"/>
+                                        <path d="M18 0H21V3H18V0Z" fill="black"/>
+                                        <path d="M24 3H27V6H24V3Z" fill="black"/>
+                                        <path d="M24 6H27V9H24V6Z" fill="black"/>
+                                        <path d="M24 9H27V12H24V9Z" fill="black"/>
+                                        <path d="M15 0H18V3H15V0Z" fill="black"/>
+                                        <path d="M21 12H24V15H21V12Z" fill="black"/>
+                                        <path d="M18 15H21V18H18V15Z" fill="black"/>
+                                        <path d="M15 18H18V21H15V18Z" fill="black"/>
+                                        <path d="M15 3H12V6H15V3Z" fill="black"/>
+                                        <path d="M15 21H12V24H15V21Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="like-button button">
+                                    <span class="button__text">Like</span>
+                                </button>
+                            </div>
                         </div>
                     </li>
                 </ul>
-                <button class="card__icon-button">
-                    <span class="button__text" view-box="0 0 39 39"></span>
-                    <svg class="card__icon">
-                        <use href="/svg/icons.svg#floppy" />
-                    </svg>
-                </button>
             </main>
+            <footer class="footer">
+                <button class="card__icon-button button">
+                    <svg viewBox="0 0 21 21" height="21" width="21" class="card__icon floppy-small" xmlns="http://www.w3.org/2000/svg">
+                        <use href="./svg/icons.svg#floppy-small" />
+                    </svg>
+                    <svg viewBox="0 0 28 28" height="28" width="28" class="card__icon floppy-medium" xmlns="http://www.w3.org/2000/svg">
+                        <use href="./svg/icons.svg#floppy-medium" />
+                    </svg>
+                    <span class="button__text">Сохранить на память</span>
+                </button>
+            </footer>
         </div>
         <script src="./scripts/like.js"></script>
     </body>
