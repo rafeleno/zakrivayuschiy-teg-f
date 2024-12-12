@@ -59,6 +59,38 @@ ol {
 }
 
 .button {
+    position: relative;
+    overflow: hidden;
     line-height: 90%;
     background-color: var(--main-color);
+    transition: 0.5s ease-in-out;
+}
+
+.button span{
+    position: relative;
+}
+
+.black-animation::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    translate: -100%;
+    transition: 0.5s ease-in-out;
+}
+
+.black-animation:focus {
+    box-shadow: 2px 2px 0 #000;
+}
+
+.black-animation:hover.button::before {
+    translate: inherit;
+}
+
+.black-animation:hover.button {
+    fill: var(--main-color);
+    color: var(--main-color)
 }

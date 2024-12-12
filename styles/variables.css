@@ -5,11 +5,17 @@
     --main-font-weight: 400;
     --title-font-weight: 700;
     --main-color: #fff;
+    --accent-color: #000;
     --text-shadow-color: var(--main-color);
-    --main-border:  2px solid #000;
+    --main-border:  2px solid var(--accent-color);
 
     --wrapper-mt: 100px;
     --wrapper-width: calc(clamp(23.438rem, 20.777vw + 18.568rem, 43.5rem));
+    
+    --page-bg: repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+               repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+               linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+;
 
     --header-height: calc(clamp(20.438rem, 6.317vw + 18.957rem, 23rem));
     --header-title-fs: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
@@ -18,7 +24,7 @@
     --main-list-item_image-label-top: 25px;
     --main-list-item_image-label-right: calc(clamp(0.625rem, 2.311vw + 0.083rem, 1.563rem)); 
 
-    --card__icon-button-width: calc(clamp(19.125rem, 4.468vw + 18.078rem, 20.938rem));
+    --card__icon-button-width: calc(clamp(19.375rem, 2.796vw + 17.582rem, 20.938rem));
 
     --main-list-gap: 52px;
 }

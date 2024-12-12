@@ -1,0 +1,38 @@
+.brightness{
+    filter: brightness(1.35);
+}
+
+.contrast_sepia {
+    filter: contrast(0.8) sepia(0.1);
+}
+
+.contrast {
+    filter: contrast(1.35);
+}
+
+.sepia {
+    filter: sepia(0.6);
+}
+
+.grayscale {
+    filter: grayscale(1.35);
+}
+
+.saturate {
+    filter: saturate(135%);
+}
+
+.opacity {
+    filter: opacity(0.95);
+}
+
+.rose-glasses {
+    filter: brightness(0);
+    filter: contrast(0);
+    filter: sepia(0);
+    filter: grayscale(0);
+    filter: saturate(0);
+    filter: opacity(1);
+
+    /* Я Не Ношу Розовых Очков */
+}

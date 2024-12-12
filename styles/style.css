@@ -16,9 +16,8 @@
     font-family: var(--main-font-family);
     font-weight: var(--main-font-weight);
     font-size: var(--main-font-size);
-    background: repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
-                repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
-                linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+    background: var(--page-bg);
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -88,7 +87,8 @@
     0px 1px 0 var(--text-shadow-color),
     0px -1px 0 var(--text-shadow-color),
     1px 0px 0 var(--text-shadow-color),
-   -1px 0px 0 var(--text-shadow-color);                ;
+   -1px 0px 0 var(--text-shadow-color);
+   z-index: 2;
 
     @supports (-webkit-text-stroke: 1px var(--main-color)) {
         text-shadow: none;
@@ -116,19 +116,24 @@
 .main-list-item_buttons {
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 12px;
 }
 
-.card__like-button {
-    align-self: flex-end;
-    margin-bottom: 3px;
+.like-icon {
+    transition: 0.3s ease;
+    width: 38px;
+}
+
+.card__like-button:focus-visible {
+    outline: 2px solid black;
 }
 
 .like-button {
     font-family: var(--accent-font-family);
     font-size: 14px;
     border: var(--main-border);
-    padding: 10px 34px;
+    padding: 13px 34px;
 }
 
 .footer {
@@ -144,24 +149,36 @@
     width: var(--card__icon-button-width);
     display: flex;
     justify-content: space-between;
-    gap: 0px;
     line-height: 90%;
-    padding: 15px 21px 15px 19px;
+    padding: 15px 19px;
     align-items: center;
+
+    @media (width <= 600px) {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.floppy {
+    position: relative;
+    color: var(--main-color);
+    fill: #000;
+    transition: 0.5s ease-out
 }
 
 .floppy-small {
-    display: block;
+    height: 21px;
+    width: 21px;
+}
 
+.floppy.floppy-small {
     @media (width <= 600px) {
-        display: none;
+        height: 29px;
+        width: 29px;
     }
 }
 
-.floppy-medium {
-    display: none;
-
-    @media (width <= 600px) {
-        display: inline;
-    }
+.button:hover .floppy {
+    fill: var(--main-color);
 }
+
