@@ -4,18 +4,37 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+@keyframes heart-is-active-scale {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.25;
+    }
+}
+
+@keyframes heart-is-active-sparks {
+    from {
+        --sparks: transparent;
+    }
+
+    to {
+        --sparks: #f00;
+    }
+}
 
 .page {
     min-inline-size: 320px;
     min-block-size: 100dvb;
     font-family: var(--main-font-family);
     font-weight: var(--main-font-weight);
-    font-size: var(--main-font-size);
+    font-size: var(--m-font-size);
     background: var(--page-bg);
     background-size: cover;
     background-attachment: fixed;
@@ -36,7 +55,7 @@
 
 .header_title {
     font-size: var(--header-title-fs);
-    margin-bottom: 20px;
+    margin-bottom: var(--header-mb);
 }
 
 .header_subtitle {
@@ -47,8 +66,8 @@
 .main-list {
     display: flex;
     flex-direction: column;
+    margin-bottom: var(--main-list-gap);
     gap: var(--main-list-gap);
-    margin-bottom: 50px;
 }
 
 .main-list-element {
@@ -74,21 +93,13 @@
 .main-list-item_image-label {
     position: absolute;
     font-family: var(--accent-font-family);
-    font-size: 14px;
+    font-size: var(--s-font-size);
     top: var(--main-list-item_image-label-top);
     right: var(--main-list-item_image-label-right);
     mix-blend-mode: hard-light;
     opacity: 0.5;
-    text-shadow:
-    1px 1px 0 var(--text-shadow-color),
-   -1px 1px 0 var(--text-shadow-color),
-    1px -1px 0 var(--text-shadow-color),
-   -1px -1px 0 var(--text-shadow-color),
-    0px 1px 0 var(--text-shadow-color),
-    0px -1px 0 var(--text-shadow-color),
-    1px 0px 0 var(--text-shadow-color),
-   -1px 0px 0 var(--text-shadow-color);
-   z-index: 2;
+    text-shadow: var(--main-list-item_image-label-shadow);
+    z-index: 2;
 
     @supports (-webkit-text-stroke: 1px var(--main-color)) {
         text-shadow: none;
@@ -96,7 +107,7 @@
     }
 }
 
-.main-list-item_image:not(:first-child) {
+.main-list-item_image {
     border: var(--main-border);
 }
 
@@ -116,24 +127,56 @@
 .main-list-item_buttons {
     display: flex;
     justify-content: end;
-    align-items: center;
-    gap: 12px;
+    gap: 6px;
+}
+
+.footer-floppy-button.button {
+    transition: 0.05s ease;
+    width: var(--floppy-button-width);
+}
+
+.card__icon-button:focus-visible {
+    outline: 2px solid black;
+    outline-offset: -2px;
+}
+
+.card__icon-button:hover {
+    --contour: var(--accent-color);
+    --main-body: var(--accent-color);
+}
+
+.card__icon-button:active {
+    --contour: #f00;
+    --main-body: #f00;
 }
 
 .like-icon {
     transition: 0.3s ease;
-    width: 38px;
 }
 
-.card__like-button:focus-visible {
-    outline: 2px solid black;
+.like-icon.is-liked {
+    animation: heart-is-active-scale 0.3s 0.1s ease-in, heart-is-active-sparks 0.3s 0.2s ease-in;
+    --contour: #f00;
+    --main-body: #f00;
+    --core: #f00;
 }
 
-.like-button {
+.core {
+    transition: fill 0.56s ease;
+}
+
+.contour {
+    transition: fill 0.5s 0.03s ease;
+}
+
+.card__like-button.button {
+    display: flex;
+    justify-content: center;
     font-family: var(--accent-font-family);
-    font-size: 14px;
+    font-size: var(--s-font-size);
     border: var(--main-border);
-    padding: 13px 34px;
+    width: 130px;
+    padding: 11px 0;
 }
 
 .footer {
@@ -142,15 +185,13 @@
     margin-bottom: 105px;
 }
 
-.card__icon-button {
+.button {
     font-family: var(--accent-font-family);
-    font-size: 14px;
+    font-size: var(--s-font-size);
     border: var(--main-border);
-    width: var(--card__icon-button-width);
     display: flex;
     justify-content: space-between;
     line-height: 90%;
-    padding: 15px 19px;
     align-items: center;
 
     @media (width <= 600px) {
@@ -159,11 +200,15 @@
     }
 }
 
+.footer-floppy-button.button {
+    padding: 15px 19px;
+}
+
 .floppy {
     position: relative;
     color: var(--main-color);
-    fill: #000;
-    transition: 0.5s ease-out
+    fill: var(--accent-color);
+    transition: 0.5s ease-out;
 }
 
 .floppy-small {
@@ -181,4 +226,3 @@
 .button:hover .floppy {
     fill: var(--main-color);
 }
-

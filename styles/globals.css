@@ -60,10 +60,13 @@ ol {
 
 .button {
     position: relative;
-    overflow: hidden;
     line-height: 90%;
     background-color: var(--main-color);
     transition: 0.5s ease-in-out;
+}
+
+.button:not(.card__icon-button) {
+    overflow: hidden;
 }
 
 .button span{
@@ -77,13 +80,13 @@ ol {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: var(--accent-color);
     translate: -100%;
     transition: 0.5s ease-in-out;
 }
 
 .black-animation:focus {
-    box-shadow: 2px 2px 0 #000;
+    box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .black-animation:hover.button::before {
@@ -93,4 +96,8 @@ ol {
 .black-animation:hover.button {
     fill: var(--main-color);
     color: var(--main-color)
+}
+
+.main-list-item_image.no-border {
+    border: none;
 }
