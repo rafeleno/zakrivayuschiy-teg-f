@@ -131,7 +131,6 @@
 }
 
 .footer-floppy-button.button {
-    transition: 0.05s ease;
     width: var(--floppy-button-width);
 }
 
@@ -185,23 +184,9 @@
     margin-bottom: 105px;
 }
 
-.button {
-    font-family: var(--accent-font-family);
-    font-size: var(--s-font-size);
-    border: var(--main-border);
-    display: flex;
-    justify-content: space-between;
-    line-height: 90%;
-    align-items: center;
-
-    @media (width <= 600px) {
-        flex-direction: column;
-        gap: 8px;
-    }
-}
-
 .footer-floppy-button.button {
     padding: 15px 19px;
+    justify-content: space-between;
 }
 
 .floppy {
@@ -216,6 +201,10 @@
     width: 21px;
 }
 
+.floppy-big {
+    width: 82px;
+}
+
 .floppy.floppy-small {
     @media (width <= 600px) {
         height: 29px;
@@ -228,19 +217,35 @@
 }
 
 .footer_dialog {
-    display: flex;
+    position: fixed;
     flex-direction: column;
+    gap: 30px;
     font-size: var(--s-font-size);
     font-family: var(--accent-font-family);
+    max-width: 353px;
+    margin: auto;
     border: var(--main-border);
     padding: 30px;
-    max-width: 353px;
+}
+
+.footer_dialog[open] {
+    display: flex;
+}
+
+.page:has(.footer_dialog[open]) {
+    overflow: hidden;
 }
 
 .footer_dialog_wrapper {
     display: flex;
+    gap: 20px;
+}
+
+.footer_dialog_title {
+    line-height: 150%;
 }
 
 .footer_dialog_button {
-    border: var(--main-border);
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
