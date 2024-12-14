@@ -1,17 +1,11 @@
 @font-face {
     font-family: Inter-Variable;
-    src:
-        url(/fonts/Inter-Variable.woff2) format("woff2-variations"), format("woff2 supports variations"),
-        local("Inter Variable"),
-        local("Arial");
+    src: url(/fonts/Inter-Variable.woff2) format("woff2-variations"), format("woff2 supports variations"), local("Inter Variable"), local("Arial");
     font-weight: 400 785;
 }
 
 @font-face {
     font-family: PressStart2P;
-    src: 
-        url(/fonts/PressStart2P-Regular.woff) format("woff2"),
-        local("PressStart2P Regular"),
-        local("Arial Bold");
+    src: url(/fonts/PressStart2P-Regular.woff) format("woff2"), local("PressStart2P Regular"), local("Arial Bold");
     font-weight: 400;
 }
