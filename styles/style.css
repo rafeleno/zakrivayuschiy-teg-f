@@ -134,6 +134,11 @@
     width: var(--floppy-button-width);
 }
 
+.card__icon-button {
+    display: flex;
+    align-items: end;
+}
+
 .card__icon-button:focus-visible {
     outline: 2px solid black;
     outline-offset: -2px;
