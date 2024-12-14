@@ -68,7 +68,6 @@ ol {
     font-size: var(--s-font-size);
     font-family: var(--accent-font-family);
     border: var(--main-border);
-    line-height: 90%;
     transition: 0.5s ease-in-out;
 }
 

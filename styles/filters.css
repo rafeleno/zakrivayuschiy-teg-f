@@ -27,12 +27,5 @@
 }
 
 .rose-glasses {
-    filter: brightness(0);
-    filter: contrast(0);
-    filter: sepia(0);
-    filter: grayscale(0);
-    filter: saturate(0);
-    filter: opacity(1);
-
     /* Я Не Ношу Розовых Очков */
 }
