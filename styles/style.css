@@ -226,3 +226,21 @@
 .button:hover .floppy {
     fill: var(--main-color);
 }
+
+.footer_dialog {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--s-font-size);
+    font-family: var(--accent-font-family);
+    border: var(--main-border);
+    padding: 30px;
+    max-width: 353px;
+}
+
+.footer_dialog_wrapper {
+    display: flex;
+}
+
+.footer_dialog_button {
+    border: var(--main-border);
+}

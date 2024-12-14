@@ -424,18 +424,20 @@
                 </ul>
             </main>
             <footer class="footer">
-                <button class="footer-floppy-button button black-animation" type="button" onclick="window['dialog-id'].open()" aria-controls="dialog-id">
+                <button class="footer-floppy-button button black-animation" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
                     <svg viewBox="0 0 40 40" class="card__icon floppy floppy-small" xmlns="http://www.w3.org/2000/svg">
                         <use href="./svg/icons.svg#floppy" />
                     </svg>
                     <span class="button__text">Сохранить на память</span>
                 </button>
                 <dialog class="footer_dialog" id="dialog-id">
-                    <svg viewBox="0 0 40 40" class="card__icon floppy floppy-big" xmlns="http://www.w3.org/2000/svg">
-                        <use href="./svg/icons.svg#floppy" />
-                    </svg>
-                    <h2 class="footer_dialog_title">Вставьте дискету, чтобы продолжить</h2>
-                    <button type="button" onclick="window['dialog-id'].close()" aria-controls="dialog-id">ок</button>
+                    <div class="footer_dialog_wrapper">
+                        <svg viewBox="0 0 40 40" height="39" class="card__icon floppy floppy-big" xmlns="http://www.w3.org/2000/svg">
+                            <use href="./svg/icons.svg#floppy" />
+                        </svg>
+                        <h2 class="footer_dialog_title">Вставьте дискету, чтобы продолжить</h2>
+                    </div>
+                    <button class="footer_dialog_button" type="button" onclick="window['dialog-id'].close()" aria-controls="dialog-id">ок</button>
                 </dialog>
             </footer>
         </div>
