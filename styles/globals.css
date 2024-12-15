@@ -75,7 +75,7 @@ ol {
 }
 
 .button span,
-.button svg{
+.button svg {
     position: relative;
     mix-blend-mode: difference;
     color: var(--main-color);
@@ -94,7 +94,7 @@ ol {
     transition: 0.5s ease-in-out;
 }
 
-.black-animation:focus {    
+.black-animation:focus {
     box-shadow: 2px 2px 0 var(--accent-color);
 }
 
