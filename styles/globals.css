@@ -68,15 +68,18 @@ ol {
     font-size: var(--s-font-size);
     font-family: var(--accent-font-family);
     border: var(--main-border);
-    transition: 0.5s ease-in-out;
 }
 
 .button:not(.card__icon-button) {
     overflow: hidden;
 }
 
-.button span {
+.button span,
+.button svg{
     position: relative;
+    mix-blend-mode: difference;
+    color: var(--main-color);
+    fill: var(--main-color);
 }
 
 .black-animation::before {
@@ -91,19 +94,10 @@ ol {
     transition: 0.5s ease-in-out;
 }
 
-.black-animation:focus {
+.black-animation:focus {    
     box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .black-animation:hover.button::before {
     translate: inherit;
-}
-
-.black-animation:hover.button {
-    fill: var(--main-color);
-    color: var(--main-color);
-}
-
-.main-list-item_image.no-border {
-    border: none;
 }
