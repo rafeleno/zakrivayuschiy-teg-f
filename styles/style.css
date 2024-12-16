@@ -12,7 +12,7 @@
     min-inline-size: 320px;
     min-block-size: 100dvb;
     font-family: var(--main-font-family);
-    font-weight: var(--main-font-weight);
+    font-variation-settings: var(--font-weight-normal);
     font-size: var(--m-font-size);
     background: var(--page-bg);
     background-size: cover;
@@ -61,7 +61,7 @@
 
 .main-list-item_title {
     font-family: var(--main-font-family);
-    font-variation-settings: "wght" 700;
+    font-variation-settings: "wght" var(--font-weight-bold);
     line-height: 140%;
 }
 
@@ -168,6 +168,7 @@
 
 .main-floppy-button.button {
     margin: auto;
+    margin-bottom: 100px;
     width: var(--floppy-button-width);
     padding: 15px 19px;
     justify-content: space-between;

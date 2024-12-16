@@ -9,6 +9,9 @@
     --accent-color: #000;
     --text-shadow-color: var(--main-color);
 
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
     --wrapper-mt: 100px;
     --wrapper-width: calc(clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem));
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>      <!--  TODO: касательно шрифтов, зайгляните в папку "./fonts/fonts.css" , спасибо  -->
+    <head>
+        <!--  TODO: касательно шрифтов, зайгляните в папку "./fonts/fonts.css" , спасибо  -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Закрывающий тег</title>
@@ -23,7 +24,7 @@
             </header>
         </div>
         <div class="main-wrapper wrapper">
-            <main>
+            <main class="main">
                 <ul class="main-list">
                     <li class="main-list-element">
                         <div class="main-list-item_title-wrapper">
@@ -450,9 +451,9 @@
                         </div>
                     </li>
                 </ul>
-                <button type="button" class="main-floppy-button button button-animation" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
+                <button type="button" class="main-floppy-button button button-animation" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
                     <svg viewBox="0 0 40 40" class="card__icon floppy floppy-small" xmlns="http://www.w3.org/2000/svg">
-                        <use href="./svg/icons.svg#floppy   " />
+                        <use href="./svg/icons.svg#floppy" />
                     </svg>
                     <span class="button__text">Сохранить на память</span>
                 </button>
@@ -463,7 +464,7 @@
                         </svg>
                         <h2 class="main_dialog_title">Вставьте дискету, чтобы продолжить</h2>
                     </div>
-                    <button type="button" class="main_dialog_button button" type="button" onclick="window['dialog-id'].close()" aria-controls="dialog-id">ок</button>
+                    <button type="button" class="main_dialog_button button" onclick="window['dialog-id'].close()" aria-controls="dialog-id">ок</button>
                 </dialog>
             </main>
         </div>
