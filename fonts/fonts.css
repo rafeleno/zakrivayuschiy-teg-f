@@ -1,11 +1,23 @@
 @font-face {
     font-family: Inter-Variable;
-    src: url(./Inter-Variable.woff2) format("woff2-variations"), format("woff2 supports variations"), local("Inter Variable"), local("Arial");
+    src: url(./Inter-Variable.woff2) format("woff2-variations"), format("woff2 supports variations"), local("Inter Variable", sans-serif), local("Arial", sans-serif);
     font-weight: 400 785;
 }
+/*                             move right!)                                                                                                  /\                               */
+/*                             --------->                                                                                                  /   \                              */
+/*                             --------->                                                                                                   ||                                */
+/*                             --------->                                                                                                   ||                                */
+
+/*                                                                                                                                        И тут!                               */
 
 @font-face {
     font-family: PressStart2P;
-    src: url(./PressStart2P-Regular.woff) format("woff2"), local("PressStart2P Regular"), local("Arial Bold");
+    src: url(./PressStart2P-Regular.woff) format("woff2"), local("PressStart2P Regular"), local("Arial Bold", sans-serif);
     font-weight: 400;
 }
+/*                                     move right!)                                                /\                                                               */
+/*                                     --------->                                                /   \                                                              */
+/*                                     --------->                                                 ||                                                                */
+/*                                     --------->                                                 ||                                                                */
+
+/*                                   У меня были добавлены системные шрифты и локалльные пути, вот тут    */

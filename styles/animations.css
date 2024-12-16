@@ -10,7 +10,7 @@
 
 */
 
-@keyframes heart-is-active-scale {
+@keyframes heart-is-liked-scale {
     from {
         scale: 1;
     }
@@ -20,12 +20,42 @@
     }
 }
 
-@keyframes heart-is-active-sparks {
+@keyframes heart-is-liked-sparks {
     from {
         --sparks: transparent;
     }
 
     to {
         --sparks: #f00;
+    }
+}
+
+@keyframes heart-is-liked-contour {
+    from {
+        --contour: initial;
+    }
+
+    to {
+        --contour: #f00;
+    }
+}
+
+@keyframes heart-is-liked-core {
+    from {
+        --core: initial;
+    }
+
+    to {
+        --core: #f00;
+    }
+}
+
+@keyframes heart-is-liked-main-body {
+    from {
+        --main-body: transparent;
+    }
+
+    to {
+        --main-body: #f00;
     }
 }

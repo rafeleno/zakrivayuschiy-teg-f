@@ -73,11 +73,11 @@
     position: absolute;
     font-family: var(--accent-font-family);
     font-size: var(--s-font-size);
-    top: var(--main-list-item_image-label-top);
-    right: var(--main-list-item_image-label-right);
+    top: var(--main-list-label-top);
+    right: var(--main-list-label-right);
     mix-blend-mode: hard-light;
     opacity: 0.5;
-    text-shadow: var(--main-list-item_image-label-shadow);
+    text-shadow: var(--main-list-label-shadow);
     z-index: 2;
 
     @supports (-webkit-text-stroke: 1px var(--main-color)) {
@@ -124,32 +124,36 @@
 }
 
 .card__icon-button:hover {
-    --contour: var(--accent-color);
+    --core: var(--accent-color);
     --main-body: var(--accent-color);
 }
 
 .card__icon-button:active {
-    --contour: #f00;
+    --core: #f00;
     --main-body: #f00;
 }
 
-.like-icon {
-    transition: 0.3s ease;
-}
-
 .like-icon.is-liked {
-    animation: heart-is-active-scale 0.3s 0.1s ease-in, heart-is-active-sparks 0.3s 0.2s ease-in;
+    animation: heart-is-liked-scale 0.3s 0.1s linear, heart-is-liked-sparks 0.3s 0.3s ease-in;
     --contour: #f00;
     --main-body: #f00;
     --core: #f00;
 }
 
+/* Добрый вечер, Я не совсем понял заголовок и сегмент, в целом, но моя анимация, тем не мение полностью совпадает с референсом в проекте, пусть может и подход к реализации немного отклоняется от ожидаемого(я ее переделал)
+    ссылка на скриншот Я.диск https://disk.yandex.ru/i/cFi235gnT3NVew
+*/
+
 .core {
-    transition: fill 0.56s ease;
+    transition: fill 0.3s linear;
+}
+
+.main-body {
+    transition: 0.3s 0.05s linear;
 }
 
 .contour {
-    transition: fill 0.5s 0.03s ease;
+    transition: fill 0.3s 0.1s linear;
 }
 
 .card__like-button.button {
@@ -162,13 +166,8 @@
     padding: 11px 0;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 105px;
-}
-
-.footer-floppy-button.button {
+.main-floppy-button.button {
+    margin: auto;
     width: var(--floppy-button-width);
     padding: 15px 19px;
     justify-content: space-between;
@@ -190,7 +189,7 @@
     }
 }
 
-.footer_dialog {
+.main_dialog {
     position: fixed;
     flex-direction: column;
     gap: 30px;
@@ -202,24 +201,24 @@
     padding: 30px;
 }
 
-.footer_dialog[open] {
+.main_dialog[open] {
     display: flex;
 }
 
-.page:has(.footer_dialog[open]) {
+.page:has(.main_dialog[open]) {
     overflow: hidden;
 }
 
-.footer_dialog_wrapper {
+.main_dialog_wrapper {
     display: flex;
     gap: 20px;
 }
 
-.footer_dialog_title {
+.main_dialog_title {
     line-height: 150%;
 }
 
-.footer_dialog_button {
+.main_dialog_button {
     padding-top: 9px;
     padding-bottom: 9px;
 }
