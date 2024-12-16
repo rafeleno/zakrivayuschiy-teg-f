@@ -24,9 +24,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: var(--header-height);
-    padding-top: var(--header-clamp-func);
-    padding-bottom: var(--header-clamp-func);
+    padding-top: var(--header-padding-clamp-func);
+    padding-bottom: var(--header-padding-clamp-func);
     background-color: var(--main-color);
     border: var(--main-border);
     font-family: var(--accent-font-family);

@@ -14,10 +14,10 @@
 
     --page-bg: repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
         repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
-    --header-height: calc(clamp(20.438rem, 6.317vw + 18.957rem, 23rem));
     --header-mb: 20px;
     --header-title-fs: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     --header-subtitle-fs: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --header-padding-clamp-func: calc(clamp(7.5rem, 1.135vw + 7.234rem, 8rem))
 
     --main-list-gap: 50px;
     --main-list-item_image-label-shadow: 1px 1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color),
