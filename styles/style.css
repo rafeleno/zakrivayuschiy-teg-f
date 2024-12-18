@@ -15,7 +15,7 @@
     min-inline-size: 320px;
     min-block-size: 100dvb;
     font-family: var(--main-font-family), sans-serif;
-    font-variation-settings: var(--font-weight-normal);
+    font-variation-settings: "wght" var(--font-weight-normal);
     font-size: var(--m-font-size);
     background: var(--page-bg);
     background-size: cover;
@@ -129,7 +129,7 @@
     height: 100%;
     outline: 2px solid black;
     outline-offset: -2px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     opacity: 0;
 }
 
