@@ -29,9 +29,9 @@
     --main-list-label-top: 25px;
     --main-list-label-right: calc(clamp(0.625rem, 2.311vw + 0.083rem, 1.563rem));
 
-    --floppy-button-width: calc(clamp(19.375rem, 2.796vw + 17.582rem, 20.938rem));
+    --floppy-button-width: calc(clamp(19.375rem, 2.817vw + 18.715rem, 21.25rem));
 
-    --main-list-gap: 52px;
+    --main-list-gap: 50px;
 
     --core: transparent;
     --contour: #000;

@@ -200,6 +200,16 @@
     width: var(--floppy-button-width);
     padding: 15px 19px;
     justify-content: space-between;
+
+    @media (width <= 600px) {
+        flex-direction: column;
+    }
+}
+
+.floppy:not(.floppy-dialog) {
+    @media (width <= 600px) {
+        margin-bottom: 8px;
+    }
 }
 
 .floppy-small {
@@ -249,6 +259,7 @@
 
 .main_dialog_title {
     line-height: 150%;
+    text-transform: uppercase;
 }
 
 .main_dialog_button {
