@@ -90,6 +90,8 @@
 
 .main-list-item_image {
     border: var(--main-border);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .main-list-item_image.no-border {
@@ -105,7 +107,7 @@
 .main-list-item_info-block {
     display: flex;
     flex-direction: column;
-    gap: 29px;
+    gap: 26px;
     margin-bottom: 25px;
 }
 
@@ -238,6 +240,7 @@
     margin: auto;
     border: var(--main-border);
     padding: 30px;
+    text-transform: uppercase;
 }
 
 .main_dialog::backdrop {
@@ -259,10 +262,10 @@
 
 .main_dialog_title {
     line-height: 150%;
-    text-transform: uppercase;
 }
 
 .main_dialog_button {
     padding-top: 9px;
     padding-bottom: 9px;
+    text-transform: uppercase;
 }
